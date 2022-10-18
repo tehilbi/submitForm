@@ -11,9 +11,13 @@ const SimpleInput = (props) => {
     const formSubmissionHandler = (event) => {
         event.preventDefault();
 
-        console.log(enteredName);
-        const enteredValue = nameInputRef.current.value;
-        console.log(enteredValue);
+        if (enteredName.trim() == '') {
+            return;
+        } else {
+            console.log(enteredName);
+            const enteredValue = nameInputRef.current.value;
+            console.log(enteredValue);
+        }
 
         // nameInputRef.current.value = ''; => Not Ideal, D'ont manipulated the DOM
         // setEnteredName('');
